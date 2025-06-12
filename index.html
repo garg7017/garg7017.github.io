@@ -28,24 +28,63 @@
       line-height: 1.6;
     }
 
+    /* ===== HEADER ===== */
     header {
       background: linear-gradient(120deg, #1e1e2f, #3e3e60);
       color: white;
-      padding: 60px 30px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      position: relative;
     }
 
     header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
+      font-size: 2rem;
     }
 
     header p {
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #ccc;
     }
 
+    nav {
+      margin-top: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* ===== HAMBURGER ===== */
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      color: white;
+    }
+
+    #nav-toggle {
+      display: none;
+    }
+
+    /* ===== CONTAINER & SECTIONS ===== */
     .container {
       max-width: 1100px;
       margin: 40px auto;
@@ -95,15 +134,6 @@
       list-style-type: square;
     }
 
-    a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
     footer {
       text-align: center;
       padding: 20px;
@@ -126,9 +156,41 @@
       background-color: #0056b3;
     }
 
+    /* ===== MOBILE STYLES ===== */
     @media (max-width: 768px) {
-      .skills {
+      .nav-links {
+        display: none;
         flex-direction: column;
+        background-color: #2e2e45;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+      }
+
+      #nav-toggle:checked + .nav-links {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      header h1 {
+        font-size: 1.6rem;
+        text-align: center;
+      }
+
+      header p {
+        text-align: center;
+      }
+
+      .contact-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
       }
     }
   </style>
@@ -138,6 +200,18 @@
   <header>
     <h1>Lokesh Garg</h1>
     <p>Senior Software Engineer | PHP · Node.js · Shopify · Full Stack</p>
+
+    <input type="checkbox" id="nav-toggle" />
+    <label for="nav-toggle" class="hamburger">&#9776;</label>
+
+    <nav class="nav-links">
+      <a href="#summary">Summary</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work History</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
     <div class="contact-links" style="margin-top: 20px;">
       <a href="mailto:garg7017@gmail.com">Email Me</a>
       <a href="tel:+917210797032">Call</a>
@@ -210,6 +284,7 @@
       <p>Phone: <a href="tel:+917210797032">+91 7210797032</a></p>
       <p>Location: Pune, India</p>
     </section>
+
   </div>
 
   <footer>
