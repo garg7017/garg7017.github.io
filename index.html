@@ -1,203 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lokesh Garg - Resume</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lokesh Garg - Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            display: flex;
-            min-height: 100vh;
-            background-color: #f4f4f9;
-        }
+  <style>
+    /* === Reset & Base === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* Sidebar */
-        .sidebar {
-            width: 250px;
-            background-color: #1e1e2f;
-            color: #fff;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      display: flex;
+      min-height: 100vh;
+    }
 
-        .sidebar h1 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
 
-        .sidebar nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
+    a:hover {
+      text-decoration: underline;
+    }
 
-        .sidebar nav a:hover {
-            background-color: #333;
-        }
+    /* === Sidebar === */
+    .sidebar {
+      width: 250px;
+      background-color: #1e1e2f;
+      color: #fff;
+      padding: 30px 20px;
+    }
 
-        /* Main Content */
-        .main-content {
-            flex: 1;
-            padding: 20px;
-        }
+    .sidebar h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
 
-        .section {
-            margin-bottom: 40px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+    .sidebar nav a {
+      display: block;
+      margin: 10px 0;
+      color: #ccc;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
 
-        .section h2 {
-            margin-bottom: 10px;
-            color: #333;
-        }
+    .sidebar nav a:hover {
+      background-color: #333;
+      color: #fff;
+    }
 
-        .section p, .section ul {
-            color: #555;
-            line-height: 1.6;
-        }
+    /* === Main Content === */
+    .main-content {
+      flex: 1;
+      padding: 40px 30px;
+    }
 
-        .section ul {
-            list-style: disc;
-            padding-left: 20px;
-        }
+    .section {
+      margin-bottom: 40px;
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #1e1e2f;
-            color: #fff;
-        }
+    .section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #1e1e2f;
+      border-left: 4px solid #007bff;
+      padding-left: 10px;
+    }
 
-        .download-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
+    .section p, .section ul {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+    }
 
-        .download-btn:hover {
-            background: #0056b3;
-        }
+    .section ul {
+      padding-left: 20px;
+      list-style-type: disc;
+      margin-top: 10px;
+    }
 
-        .skills {
-            display: flex;
-            gap: 20px;
-        }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
 
-        .skills ul {
-            flex: 1;
-            list-style: disc;
-            padding-left: 20px;
-        }
+    .skills ul {
+      flex: 1;
+    }
 
-        .skills ul li {
-            margin-bottom: 8px;
-        }
-    </style>
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1e1e2f;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    /* === Responsive === */
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        text-align: center;
+      }
+
+      .main-content {
+        padding: 20px;
+      }
+
+      .skills {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="sidebar">
-    </div>
-    <div class="main-content">
-        <section id="pinfo" class="section">
-            <h1>Lokesh Garg</h1>
-            <p>Garg7017@gmail.com | 7210797032</p>
-            <p>Pune, India</p>
-        </section>
-        <section id="summary" class="section">
-            <h2>Professional Summary</h2>
-            <p>Results-oriented and innovative Senior Software Engineer with 9+ years of experience. Easily communicates complex technical requirements to non-technical stakeholders. Excellent leadership record of leading development teams in enterprise-wide development projects.</p>
-        </section>
+  <aside class="sidebar">
+    <h1>Lokesh Garg</h1>
+    <nav>
+      <a href="#pinfo">Personal Info</a>
+      <a href="#summary">Summary</a>
+      <a href="#skills">Skills</a>
+      <a href="#work-history">Work History</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </aside>
 
-        <section id="skills" class="section">
-            <h2>Skills</h2>
-            <div class="skills">
-                <ul>
-                    <li>PHP, JavaScript, Node.js</li>
-                    <li>Git, GitHub, Bit Bucket</li>
-                    <li>CakePHP, Laravel, CodeIgnitor</li>
-                    <li>Continuous analysis of Shopify Plugins</li>
-                    <li>MySQL, MongoDB</li>
-                </ul>
-                <ul>
-                    <li>Queue, Redis</li>
-                    <li>RabbitMQ, Shopify</li>
-                    <li>Unit test cases</li>
-                    <li>Dropshipping system</li>
-                    <li>Agile/Scrum Methodology</li>
-                </ul>
-            </div>
-        </section>
+  <main class="main-content">
+    <section id="pinfo" class="section">
+      <h2>Personal Info</h2>
+      <p>Email: <a href="mailto:garg7017@gmail.com">garg7017@gmail.com</a></p>
+      <p>Phone: <a href="tel:+917210797032">+91 7210797032</a></p>
+      <p>Location: Pune, India</p>
+    </section>
 
-        <section id="work-history" class="section">
-            <h2>Work History</h2>
-            <p><strong>Senior Software Engineer | Springer Nature - Pune, India</strong></p>
-            <p>10/2022 – Current</p>
-            <ul>
-                <li>Collaborated closely with stakeholders to gather requirements, ensuring alignment with business objectives.</li>
-                <li>Implemented and maintained EsLint to enforce coding standards, improving code quality across the development team.</li>
-                <li>Integrated JFrog for npm registry, streamlining package management and enhancing the efficiency of the development workflow.</li>
-                <li>Led a private application code refactoring initiative, optimizing the MVC structure by introducing Helpers, Models, and Middleware.</li>
-                <li>Acquired proficiency in writing unit test cases in Node.js and successfully implemented them for API test scenarios, ensuring robust code quality.</li>
-                <li>Contributed to the development of a Checkout UI extension, enhancing the user experience and improving overall product functionality.</li>
-                <li>Established GitHub workflows for deploying Shopify BOT code to required branches, enhancing version control and deployment processes.</li>
-            </ul><br/>
-            <p><strong>Senior Software Engineer | Glocom Retail - Chennai, India</strong></p>
-            <p>11/2021 – 10/2022</p>
-            <ul>
-                <li>Executed pub-sub model to serve order content effectively as lead developer and primary point-of-contact for project managers.</li>
-                <li>Analyzed Shopify public apps for new opportunities and researched Theme app Extensions to integrate into Shopify applications.</li>
-                <li>Collaborated with cross-functional development team members to analyze potential system solutions based on evolving client requirements.</li>
-                <li>Worked closely with software development and testing team members to design and develop robust micro service solutions to meet requirements for functionality, scalability, and performance.</li>
-            </ul><br/>
-            <p><strong>Velocity Software Solutions - Noida, India</strong></p>
-            <p>08/2015 – 11/2021</p>
-            <ul>
-                <li>Built, tested, and deployed scalable, highly available and modular software products.</li>
-                <li>Administered, supported, and monitored databases by proactively resolving database issues and maintaining servers.</li>
-                <li>Tested programs and databases to identify issues and make necessary modifications.</li>
-                <li>Supported software engineering projects in an Agile work environment.</li>
-                <li>Responsible for meeting with clients and understanding their requirements, converting them into SDD. Later, guiding the team the in design and development of the system.</li>
-                <li>Discussed project progress with customers, collected feedback on different stages, and directly addressed concerns.</li>
-                <li>Collaborated on all stages of the systems development lifecycle, from requirements gathering to production releases.</li>
-            </ul>
-        </section>
+    <section id="summary" class="section">
+      <h2>Professional Summary</h2>
+      <p>Results-oriented and innovative Senior Software Engineer with 9+ years of experience. Adept at communicating complex technical ideas to non-technical audiences. Strong leadership experience managing enterprise-level development projects.</p>
+    </section>
 
-        <section id="education" class="section">
-            <h2>Education</h2>
-            <p><strong>Bachelor of Technology: Information Technology</strong></p>
-            <p>Poornima Institute Of Engineering & Technology - Jaipur, India</p>
-            <p>06/2015</p>
-        </section>
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="skills">
+        <ul>
+          <li>PHP, JavaScript, Node.js</li>
+          <li>Git, GitHub, Bitbucket</li>
+          <li>CakePHP, Laravel, CodeIgniter</li>
+          <li>Shopify Plugin Analysis</li>
+          <li>MySQL, MongoDB</li>
+        </ul>
+        <ul>
+          <li>Queue, Redis</li>
+          <li>RabbitMQ, Shopify</li>
+          <li>Unit Testing</li>
+          <li>Dropshipping Systems</li>
+          <li>Agile / Scrum Methodology</li>
+        </ul>
+      </div>
+    </section>
 
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:garg7017@gmail.com">garg7017@gmail.com</a></p>
-            <p>Phone: <a href="tel:+917210797032">+91 7210797032</a></p>
-        </section>
-    </div>
-    <div class="sidebar">
-    </div>
+    <section id="work-history" class="section">
+      <h2>Work History</h2>
+
+      <p><strong>Senior Software Engineer | Springer Nature - Pune, India</strong><br/>Oct 2022 – Present</p>
+      <ul>
+        <li>Gathered technical requirements from stakeholders and aligned them with business needs.</li>
+        <li>Maintained code quality with EsLint and implemented unit tests in Node.js.</li>
+        <li>Integrated JFrog npm registry and set up GitHub workflows for Shopify bot deployment.</li>
+        <li>Refactored code with MVC principles using Helpers, Models, and Middleware.</li>
+        <li>Built Checkout UI extension to improve user experience.</li>
+      </ul>
+
+      <br/>
+
+      <p><strong>Senior Software Engineer | Glocom Retail - Chennai, India</strong><br/>Nov 2021 – Oct 2022</p>
+      <ul>
+        <li>Led pub-sub model implementation for efficient order processing.</li>
+        <li>Researched and integrated Shopify Theme App Extensions.</li>
+        <li>Worked on microservices for performance and scalability.</li>
+      </ul>
+
+      <br/>
+
+      <p><strong>Software Engineer | Velocity Software Solutions - Noida, India</strong><br/>Aug 2015 – Nov 2021</p>
+      <ul>
+        <li>Developed scalable applications and managed database issues proactively.</li>
+        <li>Worked closely with clients, converting requirements into SDDs and guiding team development.</li>
+        <li>Contributed through the full SDLC, from planning to production deployment.</li>
+      </ul>
+    </section>
+
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <p><strong>Bachelor of Technology: Information Technology</strong><br/>
+         Poornima Institute Of Engineering & Technology - Jaipur, India<br/>
+         Graduated: June 2015</p>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:garg7017@gmail.com">garg7017@gmail.com</a></p>
+      <p>Phone: <a href="tel:+917210797032">+91 7210797032</a></p>
+    </section>
+  </main>
 </body>
 </html>
